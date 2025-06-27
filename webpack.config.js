@@ -1,14 +1,13 @@
 const path = require("path");
-const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.ts",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "public"),
     filename: "index.js",
   },
   resolve: {
-    modules: ['./src', 'node_modules'],
+    modules: ["./src", "node_modules"],
     alias: {
       three: path.resolve("./node_modules/three"),
       scenes: path.resolve(__dirname, "./src/scenes"),
@@ -19,7 +18,7 @@ module.exports = {
       maps: path.resolve(__dirname, "./src/maps"),
       global: path.resolve(__dirname, "./src/global"),
       utils: path.resolve(__dirname, "./src/utils"),
-      colors: path.resolve(__dirname, "./src/colors")
+      colors: path.resolve(__dirname, "./src/colors"),
     },
     extensions: [".ts", ".js"],
   },
@@ -27,10 +26,7 @@ module.exports = {
     rules: [
       {
         use: "ts-loader",
-        exclude: [
-          /node_modules/,
-          /assets/,
-        ],
+        exclude: [/node_modules/, /assets/],
       },
       {
         test: /\.glb$/i,
@@ -38,9 +34,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new CopyPlugin({
-      patterns: [{ from: "static" }],
-    }),
-  ],
+  plugins: [],
 };

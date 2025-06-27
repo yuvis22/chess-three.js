@@ -9,7 +9,7 @@
     "sourceMap": true,
     "noImplicitAny": true,
     "moduleResolution": "node",
-    "outDir": "dist",
+    "outDir": "public",
     "paths": {
       "scenes/*": ["scenes/*"],
       "managers/*": ["managers/*"],

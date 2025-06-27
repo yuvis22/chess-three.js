@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const distPath = "../dist";
+const distPath = "../public";
 
 fs.unlinkSync(path.resolve(__dirname, distPath, "styles.css"));
 
