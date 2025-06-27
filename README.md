@@ -1,28 +1,32 @@
-# Chess-3D
-A small chess game in created in `three.js`. It uses `webpack` as a bundling tool. All the 3D models were created by me in Blender. The game has a simple AI system based on the minimax algorithm with
-alpha beta pruning. In order to not block the main thread (and do not freeze entire application) the AI is instantiated on a `webworker` instance.
+# Chess 3D
 
 ![Chess 3D](https://user-images.githubusercontent.com/37155981/189495404-d5f2da23-fa9c-49eb-8980-7d8dd977f332.gif)
 
-## Deployed version
-#### Important!
-If you are encountering performance issues make sure you have **hardware acceleration** switched on. It will allow the browser to use GPU for rendering which will improve performance significantly. 
+## Features
 
+- **3D Chessboard & Pieces:** All models handcrafted in Blender for a unique look.
+- **AI Opponent:** Play against a computer using minimax with alpha-beta pruning.
+- **Web Worker AI:** AI runs in a separate thread to prevent UI freezing.
+- **Modern Web Tech:** Built with TypeScript, Webpack, and Three.js.
+- **Responsive Design:** Works across modern browsers with hardware acceleration.
 
-Game available on: 
+## Getting Started
 
-## Useful commands
+1. Clone the repo and install dependencies:
+   ```sh
+   git clone https://github.com/yourusername/chess-3d.git
+   cd chess-3d
+   npm install
+   ```
+2. Run in development mode:
+   ```sh
+   npm run start:dev
+   ```
+3. Build for production:
+   ```sh
+   npm run build:prod
+   ```
 
-```
-// run the application on development mode
-npm run start:dev
+## Play Online
 
-// build application for development
-npm run build:dev
-
-// build application for production
-npm run build:prod
-
-// run the application in production mode
-npm run start
-```
+Check out the live demo: [https://chess-threejs.vercel.app/](https://chess-threejs.vercel.app/)
