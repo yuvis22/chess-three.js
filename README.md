@@ -14,7 +14,7 @@
 
 1. Clone the repo and install dependencies:
    ```sh
-   git clone https://github.com/yourusername/chess-3d.git
+   git clone https://github.com/yuvis22/chess-three.js.git
    cd chess-3d
    npm install
    ```
